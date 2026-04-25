@@ -1,50 +1,88 @@
-# Welcome to your Expo app 👋
+🚀 COMPLETE SETUP GUIDE (DO THIS EXACTLY)
+✅ STEP 1: Install Node.js (IMPORTANT)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+You MUST install Node first.
 
-## Get started
+👉 Download:
 
-1. Install dependencies
+https://nodejs.org
+ (LTS version)
 
-   ```bash
-   npm install
-   ```
+Then check:
 
-2. Start the app
+node -v
+npm -v
+✅ STEP 2: Open project correctly
 
-   ```bash
-   npx expo start
-   ```
+After extracting ZIP:
 
-In the output, you'll find options to open the app in a
+cd react-native-store-app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+OR open folder in VS Code:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+code .
+✅ STEP 3: Install all dependencies (THIS IS THE MAIN STEP)
 
-## Get a fresh project
+Inside project folder run:
 
-When you're ready, run:
+npm install
 
-```bash
-npm run reset-project
-```
+👉 This will automatically:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+create node_modules
+install React Native packages
+install Expo (if used)
+⚠️ If it is Expo project (very likely yours)
 
-## Learn more
+Then better run:
 
-To learn more about developing your project with Expo, look at the following resources:
+npx install-expo-modules@latest
+npm install
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+OR:
 
-## Join the community
+npx expo install
+✅ STEP 4: Start project
 
-Join our community of developers creating universal apps.
+If Expo project:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npx expo start
+
+If React Native CLI:
+
+npm start
+
+or
+
+npx react-native start
+📱 STEP 5: Run on phone
+
+Install Expo Go app on mobile:
+
+Scan QR code from terminal
+❌ IMPORTANT MISTAKES YOU ARE MAKING
+1. You expected node_modules in ZIP
+
+👉 WRONG (never included in GitHub)
+
+2. You did not run npm install
+
+👉 That’s why nothing works
+
+3. Thinking “React Native is not installed”
+
+👉 React Native is NOT installed globally
+It is installed inside project via npm
+
+🧠 SIMPLE RULE
+
+GitHub project = code only
+npm install = installs everything needed to run it
+
+🔥 FINAL FIX SUMMARY
+
+Run ONLY this:
+
+cd react-native-store-app
+npm install
+npx expo start
